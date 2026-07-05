@@ -1,0 +1,1367 @@
+[
+    {
+        "name": "basic",
+        "description": "see what the basic category does",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "welcome",
+        "description": "show the Clanker welcome message",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "hello",
+        "description": "say hello to the bot",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "ping",
+        "description": "get bot's latency",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "uptime",
+        "description": "how long bot been online",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "usercount",
+        "description": "how many users does Clanker serve",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "cmdcount",
+        "description": "how many commands Clanker has",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "version",
+        "description": "see the bot's version",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "info",
+        "description": "view information about Clanker",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "vote",
+        "description": "vote for the bot on top.gg",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "invite",
+        "description": "get bot invite link",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "help",
+        "description": "get help with the bot",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "economy",
+        "description": "see what the economy category does",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "balance",
+        "description": "how much money you have",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "the user to check (defaults to you)",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "daily",
+        "description": "get your daily reward",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "weekly",
+        "description": "get your weekly reward",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "work",
+        "description": "gotta go to work",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "atm",
+        "description": "put money in ur bank or get it out",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "action",
+                "description": "choose an action",
+                "required": true,
+                "choices": [
+                    {
+                        "name": "Deposit",
+                        "value": "deposit"
+                    },
+                    {
+                        "name": "Withdraw",
+                        "value": "withdraw"
+                    }
+                ]
+            },
+            {
+                "type": 4,
+                "name": "amount",
+                "description": "amount of coins",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "rob",
+        "description": "do a thievery to another person",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "target",
+                "description": "The user you want to rob",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "roulette",
+        "description": "spin the roulette wheel",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "bet",
+                "description": "your bet",
+                "required": true
+            },
+            {
+                "type": 3,
+                "name": "color",
+                "description": "pick a color",
+                "required": true,
+                "choices": [
+                    {
+                        "name": "\ud83d\udd34 Red",
+                        "value": "red"
+                    },
+                    {
+                        "name": "\u26ab Black",
+                        "value": "black"
+                    },
+                    {
+                        "name": "\ud83d\udfe2 Green",
+                        "value": "green"
+                    }
+                ]
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "coinflip",
+        "description": "flip a coin and gamble",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "bet",
+                "description": "your bet",
+                "required": true
+            },
+            {
+                "type": 3,
+                "name": "choice",
+                "description": "pick heads or tails",
+                "required": true,
+                "choices": [
+                    {
+                        "name": "\ud83e\ude99 Heads",
+                        "value": "heads"
+                    },
+                    {
+                        "name": "\ud83e\ude99 Tails",
+                        "value": "tails"
+                    }
+                ]
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "dice",
+        "description": "roll a dice and gamble",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "bet",
+                "description": "your bet",
+                "required": true
+            },
+            {
+                "type": 4,
+                "name": "number",
+                "description": "pick a number (1-6)",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "slots",
+        "description": "lets go gambling!111",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "bet",
+                "description": "your bet",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "top",
+        "description": "see the richest people in the server",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "gift",
+        "description": "give money to another user",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "who you want to gift coins to",
+                "required": true
+            },
+            {
+                "type": 4,
+                "name": "amount",
+                "description": "how many coins",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "rps",
+        "description": "bet coins on rock paper scissors with Clanker",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "choice",
+                "description": "\u2026",
+                "required": true,
+                "choices": [
+                    {
+                        "name": "\ud83e\udea8 Rock",
+                        "value": "rock"
+                    },
+                    {
+                        "name": "\ud83d\udcc4 Paper",
+                        "value": "paper"
+                    },
+                    {
+                        "name": "\u2702\ufe0f Scissors",
+                        "value": "scissors"
+                    }
+                ]
+            },
+            {
+                "type": 4,
+                "name": "bet",
+                "description": "\u2026",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "manipulation",
+        "description": "See what the manipulation category does",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "invert",
+        "description": "Invert an image",
+        "type": 1,
+        "options": [
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "greyscale",
+        "description": "Convert image to greyscale",
+        "type": 1,
+        "options": [
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "deepfry",
+        "description": "Deep fry an image",
+        "type": 1,
+        "options": [
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "blur",
+        "description": "Blur an image",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "amount",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "bloom",
+        "description": "Add bloom effect",
+        "type": 1,
+        "options": [
+            {
+                "type": 10,
+                "name": "amount",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "pixelate",
+        "description": "Pixelate an image",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "amount",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "gif",
+        "description": "Turn an image into a GIF",
+        "type": 1,
+        "options": [
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "social",
+        "description": "see what the social category does",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "expose",
+        "description": "expose a user...",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "user to expose",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "compliment",
+        "description": "give someone a compliment :3",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "user to compliment",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "roast",
+        "description": "roast someone :3",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "user to roast",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "slap",
+        "description": "slap someone lol",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "hug",
+        "description": "hug someone <3",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "poke",
+        "description": "poke someone hehe",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "highfive",
+        "description": "high five someone!",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "rate",
+        "description": "use our very accurate rating system!!1!!",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "thing",
+                "description": "\u2026",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "nominate",
+        "description": "this user is most likely to...",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "court",
+        "description": "put someone on trial",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "the defendant",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "ship",
+        "description": "check compatibility between two users",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user1",
+                "description": "first user",
+                "required": true
+            },
+            {
+                "type": 6,
+                "name": "user2",
+                "description": "second user",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "howsilly",
+        "description": "how silly is a user? very, they are very silly!",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "user to silly check",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "howdumb",
+        "description": "how dumb is a user? very, they are very dumb!",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "user to dumb check",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "howcustom",
+        "description": "Check how much of something a user is!",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "thing",
+                "description": "What should they be checked for?",
+                "required": true
+            },
+            {
+                "type": 6,
+                "name": "user",
+                "description": "User to check",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "lonely",
+        "description": "check how lonely someone is",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "iq",
+        "description": "check someone's iq (definitely accurate)",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "eightball",
+        "description": "speak to the magic Clanker 8 ball",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "question",
+                "description": "\u2026",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "sevenball",
+        "description": "speak to the magic Clanker 7 ball",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "question",
+                "description": "\u2026",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "text",
+        "description": "see what the text category does",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "uwu",
+        "description": "uwuify text",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "caps",
+        "description": "uppercase text",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "lower",
+        "description": "lowercase text",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "reverse",
+        "description": "reverse text",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "randomcase",
+        "description": "randomize letter casing",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "novowels",
+        "description": "remove vowels from text",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "snake",
+        "description": "convert text to snake_case",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "mock",
+        "description": "mocking spongebob text",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "leet",
+        "description": "make text l33t c4s3",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "zalgo",
+        "description": "make text z\u030d\u0357\u0351a\u030e\u0304\u0310l\u0305\u033f\u0352g\u0311\u0306\u0357o\u030d\u0310\u030e",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 6,
+                "name": "target",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "utility",
+        "description": "see what the utility category does",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "dadjoke",
+        "description": "random dad joke very funny haha",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "dog",
+        "description": "i like dog",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "cat",
+        "description": "i like cat",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "oliver",
+        "description": "get a random picture of dashcrikeydash's cat",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "password",
+        "description": "get an actually good password",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "length",
+                "description": "Length of the password (4-100)",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "badadvice",
+        "description": "get some bad advice",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "qr",
+        "description": "generate a qr code for a url",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "url",
+                "description": "url to qr code-ify",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "remindme",
+        "description": "set a reminder (10m, 2h, 1d, etc)",
+        "type": 1,
+        "options": [
+            {
+                "type": 3,
+                "name": "time",
+                "description": "time like 10s, 5m, 2h, 1d, 1w",
+                "required": true
+            },
+            {
+                "type": 3,
+                "name": "message",
+                "description": "what should I remind you about",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "forgetme",
+        "description": "Export your Clanker data and delete everything (GDPR wipe)",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    }
+]
