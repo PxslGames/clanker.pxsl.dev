@@ -3,39 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Clanker — Commands</title>
+
+  <title>Clanker ~ Commands</title>
+
+  <meta name="description" content="Full list of Clanker Discord bot commands including economy, gambling, fun, meme, and utility commands. Search and explore 70+ free commands instantly." />
+  <meta name="keywords" content="clanker commands, discord bot commands, economy commands, fun commands, gambling commands, meme commands, discord bot list, all discord commands" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Pxsl" />
+  <link rel="canonical" href="https://clanker.pxsl.dev/commands/" />
+
+  <link rel="icon" type="image/png" href="/assets/clanker.png">
+  <link rel="apple-touch-icon" href="/assets/clanker.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/styles.css">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Clanker Commands — Full List of 70+ Discord Bot Commands" />
+  <meta property="og:description" content="Browse all Clanker commands including economy, gambling, memes, fun, and utility features. Fast searchable command list." />
+  <meta property="og:url" content="https://clanker.pxsl.dev/commands/" />
+  <meta property="og:image" content="https://clanker.pxsl.dev/static/preview.png" />
+  <meta property="og:site_name" content="Clanker Bot" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clanker Commands — Full List of Discord Bot Commands" />
+  <meta name="twitter:description" content="Search 70+ Clanker bot commands: economy, gambling, memes, and more." />
+  <meta name="twitter:image" content="https://clanker.pxsl.dev/static/preview.png" />
+
+  <meta name="theme-color" content="#6c5ce7" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Clanker Commands List",
+    "url": "https://clanker.pxsl.dev/commands/",
+    "description": "Full searchable list of all Clanker Discord bot commands including economy, gambling, memes, and utility commands.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Clanker Bot",
+      "url": "https://clanker.pxsl.dev/"
+    }
+  }
+  </script>
+
 </head>
 
 <body>
 
-    <nav>
+  <nav>
     <a class="logo" href="https://clanker.pxsl.dev/">Clan<span>ker</span></a>
 
     <div class="nav-links">
-        <a href="https://clanker.pxsl.dev/commands/">Features</a>
-        <a href="https://clanker.pxsl.dev/legal/">Legal</a>
-        <a href="https://discord.gg/YtQdrkxfg7" target="_blank">Our Discord Server</a>
+      <a href="https://clanker.pxsl.dev/">Home</a>
+      <a href="https://clanker.pxsl.dev/legal/">Legal</a>
+      <a href="https://discord.gg/YtQdrkxfg7" target="_blank" rel="noopener noreferrer">Our Discord Server</a>
     </div>
-    </nav>
+  </nav>
 
   <main class="commands-page">
 
-    <div class="commands-header">
-      <h1>Commands</h1>
+    <header class="commands-header">
+      <h1>Clanker Discord Bot Commands</h1>
+      <p>Browse all 70+ commands including economy, gambling, memes, fun games, and utility tools.</p>
 
       <div class="commands-bar">
-        <input type="text" id="search" placeholder="Search commands..." />
+        <input type="text" id="search" placeholder="Search commands (e.g. economy, gamble, meme)..." />
         <span id="count">0 commands</span>
       </div>
-    </div>
+    </header>
 
-    <div class="commands-grid" id="commandsGrid"></div>
+    <noscript>
+      <p>This page requires JavaScript to display the full list of commands.</p>
+    </noscript>
+
+    <section class="commands-grid" id="commandsGrid" aria-label="Discord bot commands list"></section>
 
   </main>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>Clanker Discord Bot — Free entertainment bot with 70+ commands</p>
+  </footer>
+
+  <script src="/script.js" defer></script>
 </body>
 </html>
