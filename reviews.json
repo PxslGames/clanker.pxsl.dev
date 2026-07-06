@@ -28,5 +28,10 @@
     "name": "PLACEHOLDER",
     "rating": 5,
     "text": "don't have enough reviews yet, so here's a placeholder"
+  },
+  {
+    "name": "menkerr",
+    "rating": 5,
+    "text": "I provide more than half of the user count"
   }
 ]
