@@ -433,8 +433,8 @@
         "integration_types": null
     },
     {
-        "name": "manipulation",
-        "description": "See what the manipulation category does",
+        "name": "media",
+        "description": "See what the Media category does",
         "type": 1,
         "options": [],
         "nsfw": false,
@@ -715,6 +715,138 @@
             {
                 "type": 3,
                 "name": "text",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "quote",
+        "description": "Create a dramatic quote",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "text",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "brighten",
+        "description": "Brighten an image",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "amount",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "darken",
+        "description": "Darken an image",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "amount",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "frames",
+        "description": "Extract all frames from a GIF or video",
+        "type": 1,
+        "options": [
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "boomerang",
+        "description": "Create a boomerang effect from a GIF or video",
+        "type": 1,
+        "options": [
+            {
+                "type": 11,
+                "name": "image",
                 "description": "\u2026",
                 "required": false
             },
@@ -1072,6 +1204,17 @@
                 "required": true
             }
         ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "clicker",
+        "description": "click the global button!",
+        "type": 1,
+        "options": [],
         "nsfw": false,
         "dm_permission": true,
         "default_member_permissions": null,
