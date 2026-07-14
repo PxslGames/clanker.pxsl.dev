@@ -1,154 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Clanker ~ The #1 Entertainment Discord Bot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Clanker is a free, chaotic Discord bot with 70+ commands including economy, gambling, fun games, memes, and image manipulation. Built for pure entertainment." />
-  <meta name="keywords" content="discord bot, free discord bot, economy bot, fun bot, meme bot, discord gambling, discord games, clanker bot, discord entertainment bot" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Pxsl" />
-  <link rel="canonical" href="https://clanker.pxsl.dev/" />
+    <title>Clanker ~ The #1 Entertainment Discord Bot</title>
 
-  <link rel="icon" type="image/png" href="/assets/clanker.png">
-  <link rel="shortcut icon" href="/assets/clanker.png">
-  <link rel="apple-touch-icon" href="/assets/clanker.png">
+    <meta name="description" content="Clanker is a free chaotic Discord bot with economy, games, memes, image manipulation and 70+ entertainment commands.">
+    <meta name="keywords" content="discord bot, entertainment bot, economy bot, meme bot, fun bot, clanker bot">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Pxsl">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="https://clanker.pxsl.dev/">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" href="/assets/clanker.png">
+    <link rel="apple-touch-icon" href="/assets/clanker.png">
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Clanker - The #1 Entertainment Discord Bot" />
-  <meta property="og:description" content="A chaotic free Discord bot with economy, memes, gambling, games, and more. 70+ commands and 100% free." />
-  <meta property="og:url" content="https://clanker.pxsl.dev/" />
-  <meta property="og:image" content="https://clanker.pxsl.dev/static/preview.png" />
-  <meta property="og:site_name" content="Clanker Bot" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Clanker - The #1 Entertainment Discord Bot" />
-  <meta name="twitter:description" content="Free chaotic Discord bot with economy, memes, gambling & fun commands." />
-  <meta name="twitter:image" content="https://clanker.pxsl.dev/static/preview.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
-  <meta name="theme-color" content="#6c5ce7" />
+    <link rel="stylesheet" href="/static/styles.css">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Clanker",
-    "applicationCategory": "EntertainmentApplication",
-    "operatingSystem": "Discord",
-    "description": "Clanker is a free Discord bot with 70+ entertainment commands including economy, gambling, memes, and image manipulation.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Pxsl"
+
+    <!-- Open Graph -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Clanker - The #1 Entertainment Discord Bot">
+    <meta property="og:description" content="A chaotic free Discord bot with economy, memes, games and image tools.">
+    <meta property="og:url" content="https://clanker.pxsl.dev/">
+    <meta property="og:image" content="https://clanker.pxsl.dev/static/preview.png">
+
+
+    <!-- Twitter -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clanker - The #1 Entertainment Discord Bot">
+    <meta name="twitter:description" content="Free Discord entertainment bot with 70+ commands.">
+    <meta name="twitter:image" content="https://clanker.pxsl.dev/static/preview.png">
+
+
+    <meta name="theme-color" content="#5865F2">
+
+
+    <!-- Schema -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Clanker",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "Discord",
+        "description": "A free Discord bot with entertainment commands, economy, memes and games.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Pxsl"
+        }
     }
-  }
-  </script>
+    </script>
 
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://clanker.pxsl.dev/sitemap.xml" />
 </head>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J10Z1FWB4F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-J10Z1FWB4F');
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-J10Z1FWB4F");
 </script>
 
 <body>
 
-  <nav>
-    <a class="logo" href="https://clanker.pxsl.dev/">Clan<span>ker</span></a>
+<div class="background"></div>
+
+<nav>
+
+    <a class="logo" href="/">
+        Clan<span>ker</span>
+    </a>
 
     <div class="nav-links">
-      <a href="https://clanker.pxsl.dev/commands/">Features</a>
-      <a href="https://clanker.pxsl.dev/legal/">Legal</a>
-      <a href="https://discord.gg/YtQdrkxfg7" target="_blank" rel="noopener noreferrer">Our Discord Server</a>
-    </div>
-  </nav>
 
-  <header class="hero">
-    <h1>The chaotic Discord bot <span>you never knew you needed</span>.</h1>
-    <p>Entertainment, economy, chaos, and pure stupidity - all in one bot.</p>
+        <a href="/commands/">
+            Commands
+        </a>
 
-    <div class="buttons">
-      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1482397035909873865" rel="nofollow">Invite Clanker</a>
-      <a class="btn btn-secondary" href="https://clanker.pxsl.dev/commands/">Explore Features</a>
-    </div>
-  </header>
+        <a href="/legal/">
+            Legal
+        </a>
 
-  <section class="stats" id="stats">
-    <div class="stat">
-      <h2>24/7</h2>
-      <p>Uptime</p>
-    </div>
-    <div class="stat">
-      <h2>70+</h2>
-      <p>Commands</p>
-    </div>
-    <div class="stat">
-      <h2>100%</h2>
-      <p>Free Forever</p>
-    </div>
-  </section>
+        <a href="https://discord.gg/YtQdrkxfg7" target="_blank">
+            Community
+        </a>
 
-  <section class="features" id="features">
-    <h2>Features</h2>
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <div class="badge">
+            ✨ Trusted by 21,000+ users
+        </div>
+
+        <h1>
+            The Discord bot that makes
+            <span>
+                servers come alive.
+            </span>
+        </h1>
+
+        <p>
+            Economy, memes, games, image tools,
+            and pure chaos. Everything your community
+            needs in one powerful free bot.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn primary"
+               href="https://discord.com/oauth2/authorize?client_id=1482397035909873865">
+                Invite Clanker →
+            </a>
+
+
+            <a class="btn secondary" href="/commands/">
+                Explore Commands
+            </a>
+
+        </div>
+
+        <div class="mini-stats">
+
+            <div>
+                <strong>21K+</strong>
+                Users
+            </div>
+
+            <div>
+                <strong>70+</strong>
+                Commands
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                Free
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="discord-preview">
+
+        <div class="discord-header">
+
+            <img src="/assets/clanker.png">
+
+            <div>
+                <b>Clanker</b>
+                <p>Online</p>
+            </div>
+
+        </div>
+
+        <div class="message">
+
+            <img src="/assets/clanker.png">
+
+            <div>
+                <b>Clanker</b>
+                <p>💰 You worked and earned 250 coins!</p>
+            </div>
+
+        </div>
+
+        <div class="message">
+
+            <img src="/assets/clanker.png">
+
+            <div>
+                <b>Clanker</b>
+                <p>😂 Someone just got roasted!</p>
+            </div>
+
+        </div>
+
+        <div class="message">
+
+            <img src="/assets/clanker.png">
+
+            <div>
+                <b>Clanker</b>
+                <p>🎮 Challenge accepted!</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="features">
+
+    <h2>
+        Everything your server needs
+    </h2>
 
     <div class="grid">
-      <div class="card">
-        <h3>🎮 Economy System</h3>
-        <p>Work, gamble, steal, and climb the leaderboards.</p>
-      </div>
 
-      <div class="card">
-        <h3>😂 Fun Commands</h3>
-        <p>Memes, 8ball, jokes, and pure randomness.</p>
-      </div>
+        <div class="card">
+            <span>💰</span>
+            <h3>Economy</h3>
+            <p>
+                Work, gamble, collect coins and compete with your friends.
+            </p>
+        </div>
 
-      <div class="card">
-        <h3>🎨 Image Manipulation</h3>
-        <p>Edit images and apply funny effects directly in Discord.</p>
-      </div>
+        <div class="card">
+            <span>😂</span>
+            <h3>Entertainment</h3>
+            <p>
+                Memes, jokes, games and random chaos.
+            </p>
+        </div>
 
-      <div class="card">
-        <h3>👥 Social Features</h3>
-        <p>roast your friends, compliment them, virtually slap them!</p>
-      </div>
+        <div class="card">
+            <span>🎨</span>
+            <h3>Image Tools</h3>
+            <p>
+                Create ridiculous edits directly inside Discord.
+            </p>
+        </div>
 
-      <div class="card">
-        <h3>⚡ Fast & Lightweight</h3>
-        <p>Built for speed so chaos happens instantly.</p>
-      </div>
+        <div class="card">
+            <span>👥</span>
+            <h3>Social</h3>
+            <p>
+                Roast friends, compliment people and interact.
+            </p>
+        </div>
+
+        <div class="card">
+            <span>⚡</span>
+            <h3>Fast & Reliable</h3>
+            <p>
+                Built to handle thousands of communities.
+            </p>
+        </div>
+
+        <div class="card">
+            <span>🆓</span>
+            <h3>Always Free</h3>
+            <p>
+                No premium walls. No locked commands.
+            </p>
+        </div>
     </div>
-  </section>
 
-  <section class="reviews" id="reviews">
-    <h2>What people say</h2>
+</section>
+
+<section class="reviews">
+
+    <h2>
+        Loved by communities
+    </h2>
 
     <div class="reviews-row-wrap">
-      <div class="reviews-row" id="reviewsRow"></div>
+
+        <div class="reviews-row" id="reviewsRow"></div>
+
     </div>
-  </section>
 
-  <footer>
-    <p>© 2026 Clanker Bot • Built by Pxsl & Dash • clanker.pxsl.dev</p>
-  </footer>
+</section>
 
-  <script src="static/script.js" defer></script>
+<footer>
+
+    <p>
+        © 2026 Clanker Bot • Built by Pxsl & Dash
+    </p>
+
+</footer>
+
+<script src="/static/script.js" defer></script>
+
 </body>
+
 </html>
