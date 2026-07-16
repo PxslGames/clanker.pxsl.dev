@@ -132,6 +132,17 @@
         "integration_types": null
     },
     {
+        "name": "credits",
+        "description": "view the people who helped make Clanker",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
         "name": "economy",
         "description": "see what the economy category does",
         "type": 1,
