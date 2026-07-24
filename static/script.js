@@ -30,23 +30,65 @@ async function loadReviews() {
     return card;
   }
 
-  // fill
+  // Original reviews
   reviews.forEach(r => track.appendChild(createCard(r)));
 
-  // duplicate for looping illusion
+  // Duplicate them for seamless looping
   reviews.forEach(r => track.appendChild(createCard(r)));
 
-  let scroll = 0;
   const row = document.getElementById("reviewsRow");
 
+  let scroll = 0;
+
+  // Current speed
+  let speed = 0.5;
+
+  // Target speed (used for smooth acceleration)
+  let targetSpeed = 0.5;
+
   function animate() {
-    scroll += 0.5;
-    if (scroll >= row.scrollWidth / 2) scroll = 0;
+    // Smoothly move towards the target speed
+    speed += (targetSpeed - speed) * 0.12;
+
+    scroll += speed;
+
+    if (scroll >= row.scrollWidth / 2) {
+      scroll = 0;
+    }
+
     row.scrollLeft = scroll;
+
     requestAnimationFrame(animate);
   }
 
-  setTimeout(() => animate(), 500);
+  setTimeout(animate, 500);
+
+  // Hold click to speed up
+  row.addEventListener("mousedown", () => {
+    targetSpeed = 3;
+  });
+
+  window.addEventListener("mouseup", () => {
+    targetSpeed = 0.5;
+  });
+
+  // If they drag outside the window while holding
+  window.addEventListener("mouseleave", () => {
+    targetSpeed = 0.5;
+  });
+
+  // Mobile support
+  row.addEventListener("touchstart", () => {
+    targetSpeed = 3;
+  }, { passive: true });
+
+  window.addEventListener("touchend", () => {
+    targetSpeed = 0.5;
+  });
+
+  window.addEventListener("touchcancel", () => {
+    targetSpeed = 0.5;
+  });
 }
 
 loadReviews();

@@ -132,6 +132,17 @@
         "integration_types": null
     },
     {
+        "name": "credits",
+        "description": "view the people who helped make Clanker",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
         "name": "economy",
         "description": "see what the economy category does",
         "type": 1,
@@ -864,6 +875,36 @@
         "integration_types": null
     },
     {
+        "name": "jpeg",
+        "description": "Destroy an image with JPEG compression",
+        "type": 1,
+        "options": [
+            {
+                "type": 4,
+                "name": "quality",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
         "name": "social",
         "description": "see what the social category does",
         "type": 1,
@@ -1215,6 +1256,24 @@
         "description": "click the global button!",
         "type": 1,
         "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "profile",
+        "description": "View a Clanker profile",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "User to view",
+                "required": false
+            }
+        ],
         "nsfw": false,
         "dm_permission": true,
         "default_member_permissions": null,
