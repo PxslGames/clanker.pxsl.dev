@@ -1,5 +1,174 @@
 [
     {
+        "name": "addadmin",
+        "description": "(OWNER) give someone admin",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "removeadmin",
+        "description": "(OWNER) remove admin",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "listadmins",
+        "description": "(OWNER) list admins",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "license",
+        "description": "(OWNER) send license troll message",
+        "type": 1,
+        "options": [
+            {
+                "type": 7,
+                "name": "channel",
+                "description": "\u2026",
+                "required": true,
+                "channel_types": [
+                    0,
+                    5
+                ]
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "give",
+        "description": "(OWNER) give money",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": true
+            },
+            {
+                "type": 4,
+                "name": "amount",
+                "description": "\u2026",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "take",
+        "description": "(OWNER) remove money",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": true
+            },
+            {
+                "type": 4,
+                "name": "amount",
+                "description": "\u2026",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "dm",
+        "description": "(OWNER) DM a user",
+        "type": 1,
+        "options": [
+            {
+                "type": 6,
+                "name": "user",
+                "description": "\u2026",
+                "required": true
+            },
+            {
+                "type": 3,
+                "name": "title",
+                "description": "\u2026",
+                "required": true
+            },
+            {
+                "type": 3,
+                "name": "message",
+                "description": "\u2026",
+                "required": true
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "servers",
+        "description": "(OWNER/ADMIN) list all bot servers",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "ccu",
+        "description": "(OWNER/ADMIN) View current CCU",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
         "name": "basic",
         "description": "see what the basic category does",
         "type": 1,
@@ -875,16 +1044,70 @@
         "integration_types": null
     },
     {
-        "name": "jpeg",
-        "description": "Destroy an image with JPEG compression",
+        "name": "sharpen",
+        "description": "Sharpen an image",
         "type": 1,
         "options": [
             {
                 "type": 4,
-                "name": "quality",
+                "name": "amount",
                 "description": "\u2026",
                 "required": false
             },
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "contrast",
+        "description": "Change the contrast of an image",
+        "type": 1,
+        "options": [
+            {
+                "type": 10,
+                "name": "amount",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 11,
+                "name": "image",
+                "description": "\u2026",
+                "required": false
+            },
+            {
+                "type": 3,
+                "name": "url",
+                "description": "\u2026",
+                "required": false
+            }
+        ],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "destroy",
+        "description": "Absolutely destroy an image",
+        "type": 1,
+        "options": [
             {
                 "type": 11,
                 "name": "image",
@@ -1281,6 +1504,28 @@
         "integration_types": null
     },
     {
+        "name": "badadvice",
+        "description": "get some bad advice",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
+        "name": "goodadvice",
+        "description": "get some actually good advice",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
         "name": "text",
         "description": "see what the text category does",
         "type": 1,
@@ -1576,6 +1821,17 @@
         "integration_types": null
     },
     {
+        "name": "duck",
+        "description": "i like duck",
+        "type": 1,
+        "options": [],
+        "nsfw": false,
+        "dm_permission": true,
+        "default_member_permissions": null,
+        "contexts": null,
+        "integration_types": null
+    },
+    {
         "name": "oliver",
         "description": "get a random picture of dashcrikeydash's cat",
         "type": 1,
@@ -1598,17 +1854,6 @@
                 "required": false
             }
         ],
-        "nsfw": false,
-        "dm_permission": true,
-        "default_member_permissions": null,
-        "contexts": null,
-        "integration_types": null
-    },
-    {
-        "name": "badadvice",
-        "description": "get some bad advice",
-        "type": 1,
-        "options": [],
         "nsfw": false,
         "dm_permission": true,
         "default_member_permissions": null,
