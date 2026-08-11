@@ -149,8 +149,13 @@
         <div class="mini-stats">
 
             <div>
-                <strong>60K+</strong>
+                <strong id="user-count">...</strong>
                 Users
+            </div>
+
+            <div>
+                <strong id="server-count">...</strong>
+                Servers
             </div>
 
             <div>
@@ -297,6 +302,39 @@
     </p>
 
 </footer>
+
+<script>
+    async function loadStats() {
+        try {
+            const response = await fetch("/stats.json");
+
+            if (!response.ok) {
+                throw new Error("Failed to load stats.json");
+            }
+
+            const stats = await response.json();
+
+            const userCount = document.getElementById("user-count");
+            const serverCount = document.getElementById("server-count");
+
+            if (userCount) {
+                userCount.textContent = Number(stats.users).toLocaleString();
+            }
+
+            if (serverCount) {
+                serverCount.textContent = Number(stats.guilds).toLocaleString();
+            }
+
+        } catch (error) {
+            console.error("[STATS] Failed to load statistics:", error);
+
+            document.getElementById("user-count").textContent = "60K+";
+            document.getElementById("server-count").textContent = "85+";
+        }
+    }
+
+    loadStats();
+</script>
 
 <script src="/static/script.js" defer></script>
 
