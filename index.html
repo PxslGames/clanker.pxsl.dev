@@ -116,7 +116,7 @@
     <div class="hero-left">
 
         <div class="badge">
-            ✨ Trusted by 60,000+ users
+            ✨ Trusted by <span id="badge-user-count">...</span> users      
         </div>
 
         <h1>
@@ -316,20 +316,32 @@
 
             const userCount = document.getElementById("user-count");
             const serverCount = document.getElementById("server-count");
+            const badgeUserCount = document.getElementById("badge-user-count");
+
+            const users = Number(stats.users);
+            const servers = Number(stats.guilds);
+
+            const formattedUsers = users.toLocaleString();
+            const formattedServers = servers.toLocaleString();
 
             if (userCount) {
-                userCount.textContent = Number(stats.users).toLocaleString();
+                userCount.textContent = formattedUsers;
             }
 
             if (serverCount) {
-                serverCount.textContent = Number(stats.guilds).toLocaleString();
+                serverCount.textContent = formattedServers;
+            }
+
+            if (badgeUserCount) {
+                badgeUserCount.textContent = formattedUsers;
             }
 
         } catch (error) {
             console.error("[STATS] Failed to load statistics:", error);
 
-            document.getElementById("user-count").textContent = "60K+";
-            document.getElementById("server-count").textContent = "85+";
+            document.getElementById("user-count").textContent = "-";
+            document.getElementById("server-count").textContent = "-";
+            document.getElementById("badge-user-count").textContent = "-";
         }
     }
 
