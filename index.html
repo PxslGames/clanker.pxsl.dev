@@ -306,7 +306,9 @@
 <script>
     async function loadStats() {
         try {
-            const response = await fetch("/stats.json");
+            const response = await fetch(
+                "https://api.pxsl.dev/stats.json"
+            );
 
             if (!response.ok) {
                 throw new Error("Failed to load stats.json");
@@ -337,17 +339,35 @@
             }
 
         } catch (error) {
-            console.error("[STATS] Failed to load statistics:", error);
+            console.error(
+                "[STATS] Failed to load statistics:",
+                error
+            );
 
-            document.getElementById("user-count").textContent = "-";
-            document.getElementById("server-count").textContent = "-";
-            document.getElementById("badge-user-count").textContent = "-";
+            const userCount = document.getElementById("user-count");
+            const serverCount = document.getElementById("server-count");
+            const badgeUserCount = document.getElementById("badge-user-count");
+
+            if (userCount) {
+                userCount.textContent = "-";
+            }
+
+            if (serverCount) {
+                serverCount.textContent = "-";
+            }
+
+            if (badgeUserCount) {
+                badgeUserCount.textContent = "-";
+            }
         }
     }
 
+
     async function loadCommandCount() {
         try {
-            const response = await fetch("/commands/data.json");
+            const response = await fetch(
+                "https://api.pxsl.dev/commands.json"
+            );
 
             if (!response.ok) {
                 throw new Error("Failed to load command data");
@@ -358,7 +378,7 @@
             const commandCount = document.getElementById("command-count");
 
             if (commandCount) {
-                commandCount.textContent = commands.length;
+                commandCount.textContent = commands.length.toLocaleString();
             }
 
         } catch (error) {
@@ -367,13 +387,16 @@
                 error
             );
 
-            const commandCount = document.getElementById("command-count");
+            const commandCount = document.getElementById(
+                "command-count"
+            );
 
             if (commandCount) {
                 commandCount.textContent = "-";
             }
         }
     }
+
 
     loadStats();
     loadCommandCount();

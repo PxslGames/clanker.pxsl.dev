@@ -168,7 +168,7 @@ search.addEventListener("input", () => {
   render(filtered);
 });
 
-fetch("data.json")
+fetch("https://api.pxsl.dev/commands.json")
   .then(response => {
     if (!response.ok) {
       throw new Error(
@@ -181,7 +181,7 @@ fetch("data.json")
   .then(data => {
     if (!Array.isArray(data)) {
       throw new Error(
-        "data.json does not contain an array"
+        "commands.json does not contain an array"
       );
     }
 
