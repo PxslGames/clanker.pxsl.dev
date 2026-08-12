@@ -2,18 +2,111 @@ const grid = document.getElementById("commandsGrid");
 const search = document.getElementById("search");
 const count = document.getElementById("count");
 
+const heroCommandCount = document.getElementById("heroCommandCount");
+const commandTotal = document.getElementById("commandTotal");
+const categoryTotal = document.getElementById("categoryTotal");
+
 let commands = [];
 
+function escapeHTML(value) {
+  if (value === null || value === undefined) {
+    return "";
+  }
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function formatChoices(choices) {
+  if (!choices || choices.length === 0) {
+    return "";
+  }
+
+  return `
+    <div style="margin-top: 6px;">
+      <strong>Choices:</strong><br>
+      ${choices.map(choice => {
+        return `• ${escapeHTML(choice.name)} → <code>${escapeHTML(choice.value)}</code>`;
+      }).join("<br>")}
+    </div>
+  `;
+}
+
 function formatOptions(options) {
-  if (!options || options.length === 0) return "";
+  if (!options || options.length === 0) {
+    return "";
+  }
 
   return options.map(opt => {
-    return `• ${opt.name} (${opt.required ? "required" : "optional"})`;
-  }).join("<br>");
+    const required = opt.required
+      ? "required"
+      : "optional";
+
+    const description = opt.description
+      ? ` — ${escapeHTML(opt.description)}`
+      : "";
+
+    const choices = formatChoices(opt.choices);
+
+    return `
+      <div style="margin-bottom: 8px;">
+        • <strong>${escapeHTML(opt.name)}</strong>
+        (${required})${description}
+        ${choices}
+      </div>
+    `;
+  }).join("");
+}
+
+function getCategories(commandList) {
+  const categories = new Set();
+
+  commandList.forEach(command => {
+    const parts = command.name.trim().split(/\s+/);
+
+    if (parts.length > 0 && parts[0]) {
+      categories.add(parts[0].toLowerCase());
+    }
+  });
+
+  return categories;
+}
+
+function updateStats() {
+  const commandCount = commands.length;
+  const categories = getCategories(commands);
+  const categoryCount = categories.size;
+
+  if (heroCommandCount) {
+    heroCommandCount.textContent = `${commandCount}+`;
+  }
+
+  if (commandTotal) {
+    commandTotal.textContent = commandCount;
+  }
+
+  if (categoryTotal) {
+    categoryTotal.textContent = categoryCount;
+  }
 }
 
 function render(list) {
   grid.innerHTML = "";
+
+  if (list.length === 0) {
+    grid.innerHTML = `
+      <div class="command-desc" style="grid-column: 1 / -1; text-align: center;">
+        No commands found.
+      </div>
+    `;
+
+    count.textContent = "0 commands";
+    return;
+  }
 
   list.forEach(cmd => {
     const card = document.createElement("div");
@@ -22,12 +115,24 @@ function render(list) {
     const optionsHTML = formatOptions(cmd.options);
 
     card.innerHTML = `
-      <div class="command-name">/${cmd.name}</div>
-      <div class="command-desc">${cmd.description || "No description"}</div>
+      <div class="command-name">
+        /${escapeHTML(cmd.name)}
+      </div>
 
-      ${optionsHTML ? `<div class="command-desc" style="margin-top:8px;">
-        <strong>Options:</strong><br>${optionsHTML}
-      </div>` : ""}
+      <div class="command-desc">
+        ${escapeHTML(cmd.description || "No description")}
+      </div>
+
+      ${
+        optionsHTML
+          ? `
+            <div class="command-desc" style="margin-top: 8px;">
+              <strong>Options:</strong><br>
+              ${optionsHTML}
+            </div>
+          `
+          : ""
+      }
 
       <div class="command-tag">
         ${cmd.type === 1 ? "Slash Command" : "Command"}
@@ -41,24 +146,111 @@ function render(list) {
 }
 
 search.addEventListener("input", () => {
-  const value = search.value.toLowerCase();
+  const value = search.value
+    .trim()
+    .toLowerCase();
 
-  const filtered = commands.filter(c =>
-    c.name.toLowerCase().includes(value) ||
-    (c.description || "").toLowerCase().includes(value)
-  );
+  const filtered = commands.filter(command => {
+    const name = command.name
+      ? command.name.toLowerCase()
+      : "";
+
+    const description = command.description
+      ? command.description.toLowerCase()
+      : "";
+
+    return (
+      name.includes(value) ||
+      description.includes(value)
+    );
+  });
 
   render(filtered);
 });
 
-// LOAD FROM JSON
 fetch("data.json")
-  .then(res => res.json())
-  .then(data => {
-    commands = data;
-    render(commands);
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(
+        `HTTP ${response.status}`
+      );
+    }
+
+    return response.json();
   })
-  .catch(err => {
-    console.error("Failed to load commands:", err);
-    count.textContent = "failed to load commands";
+  .then(data => {
+    if (!Array.isArray(data)) {
+      throw new Error(
+        "data.json does not contain an array"
+      );
+    }
+
+    commands = data;
+
+    updateStats();
+    render(commands);
+
+    document.title = `Clanker ~ ${commands.length} Commands`;
+
+    const heroHeading = document.querySelector(
+      ".commands-hero h1 span"
+    );
+
+    if (heroHeading) {
+      heroHeading.textContent = `${commands.length}+ Commands`;
+    }
+
+    const ogTitle = document.querySelector(
+      'meta[property="og:title"]'
+    );
+
+    if (ogTitle) {
+      ogTitle.setAttribute(
+        "content",
+        `Clanker Commands — ${commands.length}+ Discord Bot Commands`
+      );
+    }
+
+    const metaDescription = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        `Full list of Clanker Discord bot commands including economy, gambling, fun, meme, and utility commands. Explore ${commands.length}+ free commands instantly.`
+      );
+    }
+
+    const ogDescription = document.querySelector(
+      'meta[property="og:description"]'
+    );
+
+    if (ogDescription) {
+      ogDescription.setAttribute(
+        "content",
+        `Browse all ${commands.length}+ Clanker commands including economy, games, memes and utility tools.`
+      );
+    }
+  })
+  .catch(error => {
+    console.error(
+      "Failed to load commands:",
+      error
+    );
+
+    count.textContent =
+      "Failed to load commands";
+
+    if (heroCommandCount) {
+      heroCommandCount.textContent = "—";
+    }
+
+    if (commandTotal) {
+      commandTotal.textContent = "—";
+    }
+
+    if (categoryTotal) {
+      categoryTotal.textContent = "—";
+    }
   });

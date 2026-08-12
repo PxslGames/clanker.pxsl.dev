@@ -159,7 +159,7 @@
             </div>
 
             <div>
-                <strong>80+</strong>
+                <strong id="command-count">...</strong>
                 Commands
             </div>
 
@@ -345,7 +345,38 @@
         }
     }
 
+    async function loadCommandCount() {
+        try {
+            const response = await fetch("/commands/data.json");
+
+            if (!response.ok) {
+                throw new Error("Failed to load command data");
+            }
+
+            const commands = await response.json();
+
+            const commandCount = document.getElementById("command-count");
+
+            if (commandCount) {
+                commandCount.textContent = commands.length;
+            }
+
+        } catch (error) {
+            console.error(
+                "[COMMANDS] Failed to load command data:",
+                error
+            );
+
+            const commandCount = document.getElementById("command-count");
+
+            if (commandCount) {
+                commandCount.textContent = "-";
+            }
+        }
+    }
+
     loadStats();
+    loadCommandCount();
 </script>
 
 <script src="/static/script.js" defer></script>
